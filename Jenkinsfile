@@ -12,7 +12,7 @@ pipeline{
     }
       stage("Date"){
             steps{
-                now="$(date +"%T")"
+                now="${date +"%T"}"
                 echo "Current time : $now"
         }
     }
