@@ -10,5 +10,11 @@ pipeline{
                 echo "The cloud is ${params.cloud} and environment is ${environment}"
         }
     }
+      stage("BU"){
+            steps{
+                now="$(date +"%T")"
+                echo "Current time : $now"
+        }
+    }
 }
 }
