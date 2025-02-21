@@ -12,8 +12,8 @@ pipeline{
     }
       stage("Date"){
             steps {
-                  def now = new Date().format('HH:mm:ss')
-                  println "Current time: $now"
+                  echo "Hello! World"
+                  env.BUILD_TAG
             }
       }
 }
