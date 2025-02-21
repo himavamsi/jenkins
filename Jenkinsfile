@@ -13,7 +13,7 @@ pipeline{
       stage("Date"){
             steps {
                   echo "Hello! World"
-                  env.BUILD_TAG
+                  echo env.BUILD_TAG
             }
       }
 }
