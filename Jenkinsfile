@@ -11,10 +11,10 @@ pipeline{
         }
     }
       stage("Date"){
-            steps{
-                now="${date +"%T"}"
-                echo "Current time : $now"
-        }
-    }
+            steps {
+                  def now = new Date().format('HH:mm:ss')
+                  println "Current time: $now"
+            }
+      }
 }
 }
