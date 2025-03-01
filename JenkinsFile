@@ -1,0 +1,20 @@
+pipeline{
+    
+    agent any
+    
+    parameters{
+        
+        choice(name:"cloud", choices:["Aws","Azure","Gcp"], description:"cloud")
+        choice(name:"environment", choices:["Prod","Dev","Test"])
+    }
+    
+    stages{
+        
+        stage("Build"){
+            
+            steps{
+                echo "The cloud is ${params.cloud} and environment is ${params.environment} "
+            }
+        }
+    }
+}
